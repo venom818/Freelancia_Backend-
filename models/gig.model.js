@@ -5,42 +5,64 @@ const GigSchema = new Schema({
  
     userId: {
         type: String,
-        required,
+        required: true,
     },
     title:{
         type: String,
-        required,
+        required: true,
     },
     desc:{
         type:String,
-        required,
+        required: true,
     },
     totalStars:{
         type: Number,
-        required,
+        default: 0,
     },
     starNumber:{
         type:Number,
-        required,
+        default: 0,
     },
     cat: {
         type: String,
-        required,
+        required: true,
     },
     price: {
         type: Number,
-        required,
+        required: true,
     },
     cover:{
         type: String,
-        required,
+        required: true,
     },
     images:{
         type: [String], // Array of image URLs
-        required,
-    }
-
- 
+        required: false,
+    },
+    shortTitle:{
+        type: String,
+        required:true,
+    },
+    shortTitle:{
+        type: String,
+        required:true,
+    },
+    deliveryTime:{
+        type: Number,
+        required: true,
+    },
+    revisionNumber:{
+        type: Number,
+        required: true,
+    },
+    features:{
+        type: [String], // Array of features
+        required: false,
+    },
+    sales:{
+        type: Number,
+        default: 0,
+    },
 }, {
     timestamps:true
 });
